@@ -1,0 +1,16 @@
+{
+    "contents" : "makeCacheMatrix <- function(x = matrix()) {\n  m<-NULL\n  set<-function(y){\n  x<<-y\n  m<<-NULL\n}\nget<-function() x\nsetmatrix<-function(solve) m<<- solve\ngetmatrix<-function() m\nlist(set=set, get=get,\n   setmatrix=setmatrix,\n   getmatrix=getmatrix)\n}\n\ncacheSolve <- function(x=matrix(), ...) {\n    m<-x$getmatrix()\n    if(!is.null(m)){\n      message(\"getting cached data\")\n      return(m)\n    }\n    matrix<-x$get ()\n    m<-solve(matrix, ...)\n    x$setmatrix(m)\n    m\n}",
+    "created" : 1401040780494.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3742947403",
+    "id" : "DB6A6B1",
+    "lastKnownWriteTime" : 1401040797,
+    "path" : "~/datasciencecoursera/Test2.md",
+    "project_path" : null,
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "markdown"
+}

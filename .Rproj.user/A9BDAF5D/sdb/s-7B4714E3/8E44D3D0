@@ -1,0 +1,16 @@
+{
+    "contents" : "makeCacheMatrix <- function(x = matrix()) {\n  m<-NULL\n  set<-function(y){\n    x<<-y\n    m<<-NULL\n  }\n  get<-function() x\n  setmatrix<-function(solve) m<<- solve\n  getmatrix<-function() m\n  list(set=set, get=get,\n       setmatrix=setmatrix,\n       getmatrix=getmatrix)\n}\n\ncacheSolve <- function(x=matrix(), ...) {\n  m<-x$getmatrix()\n  if(!is.null(m)){\n    message(\"getting cached data\")\n    return(m)\n  }\n  matrix<-x$get ()\n  m<-solve(matrix, ...)\n  x$setmatrix(m)\n  m\n}\n\n\n\n",
+    "created" : 1401040125599.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1388922388",
+    "id" : "8E44D3D0",
+    "lastKnownWriteTime" : 1401044679,
+    "path" : "~/Assignment2 Function.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "source_on_save" : true,
+    "type" : "r_source"
+}
